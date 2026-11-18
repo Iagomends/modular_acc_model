@@ -1,5 +1,5 @@
 % Load data
-data = load('TDT_06_M086_P60.mat');
+data = load('AMT_06_M142_P60.mat');
 disp(fieldnames(data)); % Show available variables
 
 % Select data
