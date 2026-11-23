@@ -176,12 +176,12 @@ ax = gobjects(3,1);
 for k = 1:3, ax(k) = nexttile(layout); end
 panels = [1 1 2 2 2 2 2 2 3 3 3 3];
 colors = [0 .36 .65; .85 .33 .10];
-colorIndex = [1 2 1 2 1 2 1 2 2 1 1 2];
+colorIndex = [1 2 1 2 1 2 2 1 2 2 1 1];
 styles = {'-','--','-','-','--','--',':',':','-','--','-','--'};
 labels = {'Simulated speed','Measured speed','Motor 1 simulated torque','Motor 2 simulated torque', '', '', ...
-    'Motor 1 measured torque', 'Motor 2 measured torque', ...
-    'Motor 2 simulated rotation','Motor 1 measured rotation', ...
-    'Motor 1 simulated rotation','Motor 2 measured rotation'};
+    'Motor 2 measured torque', 'Motor 1 measured torque', ...
+    'Motor 2 simulated rotation','Motor 2 measured rotation', ...
+    'Motor 1 simulated rotation','Motor 1 measured rotation'};
 for k = [1:4 7:12]
     ts = series{k};
     y = squeeze(ts.Data);
