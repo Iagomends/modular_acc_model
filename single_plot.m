@@ -13,7 +13,7 @@ y1 = data1.out.logsout.get('acc').Values;
 figure;
 plot(y.Time, y.Data, 'b-', 'LineWidth', 1.5,'Color', [0.8500 0.3250 0.0980]); hold on;
 plot(y1.Time, y1.Data, 'b-', 'LineWidth', 1.5,'Color', [0.00 0.36 0.65], 'LineStyle', '--')
-legend('Acceleration with dynamic shaft', 'Acceleration without dynamic shaft', 'Location', 'northwest');
+legend('Acceleration with dynamic shaft', 'Acceleration without dynamic shaft', 'Location', 'best');
 
 xlabel('Time [s]');
 ylabel('acceleration [m/s²]');
@@ -21,7 +21,7 @@ ylabel('acceleration [m/s²]');
 
 
 xlim([0 0.1]);          % X-axis limits
-ylim([0 10]);           % Y-axis limits
+ylim([0 9]);           % Y-axis limits
 
 grid on;
 ax = gca;
