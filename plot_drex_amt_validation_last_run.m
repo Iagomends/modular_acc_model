@@ -182,13 +182,13 @@ for motor = 1:2
     color = colors(motor,:);
     prefix = sprintf('motor%d_',motor);
     drawSeries(ax(2),data.([prefix 'torque_sim']),color,'-', ...
-        sprintf('Motor %d simulated torque',motor),1);
+        sprintf('Motor %d simulated torque',3-motor),1);
     drawSeries(ax(2),data.([prefix 'torque_measured']),color,'--', ...
-        sprintf('Motor %d measured torque',motor),1);
+        sprintf('Motor %d measured torque',3-motor),1);
     drawSeries(ax(3),data.([prefix 'speed_sim']),color,'-', ...
-        sprintf('Motor %d simulated rotation',motor),factor);
+        sprintf('Motor %d simulated rotation',3-motor),factor);
     drawSeries(ax(3),data.([prefix 'speed_measured']),color,'--', ...
-        sprintf('Motor %d measured rotation',motor),factor);
+        sprintf('Motor %d measured rotation',3-motor),factor);
 end
 for k = 1:3
     grid(ax(k),'on');
